@@ -1,132 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lavish Sheoran - Portfolio</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #2c3e50;
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0 0 10px 0;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-        }
-        section {
-            background: #fff;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-        }
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            list-style: none;
-            padding: 0;
-        }
-        .skills-list li {
-            background: #3498db;
-            color: #fff;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-        }
-        .project {
-            margin-bottom: 20px;
-        }
-        .project h3 {
-            margin-bottom: 5px;
-            color: #2980b9;
-        }
-        .project p {
-            margin-top: 0;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lavish Sheoran | Portfolio</title>
+<meta name="description" content="Portfolio of Lavish Sheoran, Finance and Data Science student at Rutgers University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fffdfc; --ink:#2b1f20; --muted:#6e5b5c; --line:#ecdcdb;
+  --accent:#a8413f; --accent-ink:#ffffff; --chip:#f9ecea; --tint:#fbf1ef;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 Inter,system-ui,sans-serif}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:860px;margin:0 auto;padding:0 1.5rem}
+header.nav{border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}
+.brand{font-family:Fraunces,Georgia,serif;font-weight:800;text-decoration:none;color:var(--ink)}
+nav a{margin-left:1.25rem;color:var(--muted);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--accent)}
+.hero{padding:5.5rem 0 4rem;background:var(--tint);border-bottom:4px solid var(--accent)}
+.hero h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(3.4rem,13vw,8rem);line-height:.95;letter-spacing:-.02em;margin:0 0 1.5rem;color:var(--accent)}
+.hero p.statement{font-size:clamp(1.15rem,2.4vw,1.45rem);line-height:1.5;max-width:34ch;margin:0 0 2rem;color:var(--ink)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:.7rem 1.3rem;border-radius:6px;text-decoration:none;font-weight:600;margin-right:.6rem}
+.btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent);padding:calc(.7rem - 2px) calc(1.3rem - 2px)}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+#statement+section{border-top:0}
+h2{font-family:Fraunces,Georgia,serif;font-size:1.9rem;margin:0 0 1.5rem}
+.skills{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.skills li{background:var(--chip);border:1px solid var(--line);padding:.4rem .9rem;border-radius:999px;font-weight:500}
+.skill-group{margin-bottom:1.5rem}
+.skill-group h3{margin:0 0 .6rem;font-size:1rem;color:var(--muted);font-weight:600}
+.project{padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.project:last-child{border-bottom:0}
+.project h3{margin:0 0 .4rem;font-family:Fraunces,Georgia,serif;font-size:1.35rem}
+.project p{margin:.3rem 0 .8rem;max-width:62ch}
+.tags{color:var(--muted);font-size:.92rem;margin-bottom:.6rem}
+.project a{font-weight:600;margin-right:1.2rem}
+footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.95rem}
+@media (max-width:540px){nav a{margin-left:.8rem}.hero{padding-top:3.5rem}}
+</style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Lavish Sheoran[cite: 1]</h1>
-            <p>sheoranlavish@gmail.com | Cupertino, CA[cite: 1]</p>
-        </div>
-    </header>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Lavish Sheoran</a>
+    <nav aria-label="Main">
+      <a href="#statement">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+    </nav>
+  </div>
+</header>
 
-    <div class="container">
-        <!-- Personal Statement Section -->
-        <section id="statement">
-            <h2>Personal Statement</h2>
-            <p>I am a Finance and Data Science student at Rutgers University with cross-functional experience in financial modeling, business strategy, and front-end development[cite: 1].</p>
-        </section>
+<main id="top">
+  <div class="wrap hero" id="statement">
+    <h1>Lavish Sheoran</h1>
+    <p class="statement">I'm a Rutgers finance and data science student who turns data and code into sharper business decisions.</p>
+    <a class="btn" href="#projects">See my projects</a>
+    <a class="btn alt" href="mailto:sheoranlavish@gmail.com">Email me</a>
+  </div>
 
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>Javascript[cite: 1]</li>
-                <li>Python[cite: 1]</li>
-                <li>Xcode[cite: 1]</li>
-                <li>Microsoft Suite[cite: 1]</li>
-                <li>Bloomberg[cite: 1]</li>
-                <li>Pitchbook[cite: 1]</li>
-                <li>Financial Accounting & Macro-Economics[cite: 1]</li>
-                <li>Bilingual (English, Hindi, Spanish)[cite: 1]</li>
-            </ul>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects & Experience</h2>
-            
-            <div class="project">
-                <h3>Bender Trust Fund Project | LIBOR Rutgers[cite: 1]</h3>
-                <p>Analyzed an $18B cap firm's 4.3M-ton capacity and formulated a BUY thesis designed to capture over $100M in synergies and expand margins across 86 facilities[cite: 1]. <br>
-                <em><a href="#">Link to Financial Model / Presentation (Insert Link Here)</a></em></p>
-            </div>
-
-            <div class="project">
-                <h3>UI Standardization | Promly[cite: 1]</h3>
-                <p>Refactored core UI design tokens in Xcode to standardize global color palettes across 12+ screens and collaborated with engineers to resolve critical client-side bugs[cite: 1]. <br>
-                <em><a href="#">Link to GitHub Repo / Live Demo (Insert Link Here)</a></em></p>
-            </div>
-
-            <div class="project">
-                <h3>Youth Athletics Outreach | Junior Stars Academy[cite: 1]</h3>
-                <p>Created community promotional campaigns that expanded program enrollment by 35% and directed athletic curriculum for over 50 youth athletes[cite: 1]. <br>
-                <em><a href="#">Link to Campaign Details (Insert Link Here)</a></em></p>
-            </div>
-        </section>
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <div class="skill-group">
+        <h3>Technical</h3>
+        <ul class="skills">
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>Xcode</li>
+          <li>Microsoft Suite</li>
+          <li>Bloomberg</li>
+          <li>PitchBook</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Professional</h3>
+        <ul class="skills">
+          <li>Financial analysis</li>
+          <li>Equity research</li>
+          <li>Cross-functional collaboration</li>
+          <li>Leadership</li>
+          <li>Public speaking</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <ul class="skills">
+          <li>English (fluent)</li>
+          <li>Hindi (fluent)</li>
+          <li>Spanish (conversational)</li>
+        </ul>
+      </div>
     </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <h3>Bender Trust Fund: Equity Investment Thesis</h3>
+        <div class="tags">LIBOR Rutgers, Oct to Nov 2025, Financial modeling, Equity research</div>
+        <p>Analyzed an $18B market-cap firm with 4.3M tons of capacity, over $1B in free cash flow, and an EBITDA margin recovering from 15% to above 17%. Built a BUY thesis around capturing more than $100M in synergies and expanding margins across 86 facilities.</p>
+        <a href="https://github.com/YOUR-USERNAME/bender-trust-fund-thesis">View write-up</a>
+      </article>
+
+      <article class="project">
+        <h3>Promly: UI Design Token Refactor</h3>
+        <div class="tags">Front End Development Internship, Xcode, UI design systems</div>
+        <p>Refactored core UI design tokens in Xcode to standardize global color palettes across 12+ screens. Worked with UX designers and backend engineers to resolve critical client-side bugs.</p>
+        <a href="https://github.com/YOUR-USERNAME/promly-ui-tokens">View code</a>
+      </article>
+
+      <article class="project">
+        <h3>Junior Stars Academy: Enrollment Campaigns</h3>
+        <div class="tags">Secretary and Coach, Marketing, Community outreach</div>
+        <p>Created outreach and community promotional campaigns that grew program enrollment by 35%. Also directed athletic development and curriculum for 50+ youth athletes across seasons.</p>
+        <a href="https://github.com/YOUR-USERNAME/junior-stars-campaigns">View materials</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="mailto:sheoranlavish@gmail.com">sheoranlavish@gmail.com</a> &nbsp;|&nbsp;
+    Rutgers University, New Brunswick, NJ
+  </div>
+</footer>
 
 </body>
 </html>
